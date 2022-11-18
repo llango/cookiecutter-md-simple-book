@@ -525,7 +525,7 @@ $else$
 $endif$
 \subtitle{{cookiecutter.subtitle_essay}}
 $endif$
-\author{$for(author)${{cookiecutter.author_essay}}$sep$ \and $endfor$}
+\author{著: $for(author)${ {{cookiecutter.author_essay}} }$sep$ \and $endfor$}
 \date{$date$}
 $if(beamer)$
 $if(institute)$
@@ -682,8 +682,8 @@ $endif$
 $if(beamer)$
 $else$
 \usepackage{titling}
-\title{{cookiecutter.title_essay}}
-\author{$for(author)${{cookiecutter.author_essay}}$sep$, $endfor$}
+\title{ {{cookiecutter.title_essay}} }
+\author{著: $for(author)${ {{cookiecutter.author_essay}} }$sep$, $endfor$}
 \date{$date$}
 $endif$
 
@@ -935,26 +935,26 @@ $if(titlepage-background)$
 {
   \setstretch{2}
   \vskip 1em
-  \noindent {\Huge \textbf{\textbf{\textsf{{cookiecutter.title_essay}}}}}
+  \noindent {\Huge \textbf{\textbf{\textsf{ {{cookiecutter.title_essay}} }}}}
   $if(subtitle)$
   \vskip 1em
-  {\Large \textsf{{cookiecutter.subtitle_essay}}}
+  {\Large \textsf{ {{cookiecutter.subtitle_essay}}} }
   $endif$
   \vskip 2em
-  \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$} \vskip 0.6em \textsf{$date$}}
+  \noindent {\Large \textsf{著: $for(author)$ { {{cookiecutter.author_essay}} }$sep$, $endfor$} \vskip 0.6em \textsf{$date$}}
   \vfill
 }
 $else$
 {
   \setstretch{1.4}
   \vfill
-  \noindent {\Huge \textbf{\textsf{{cookiecutter.title_essay}}}}
+  \noindent {\Huge \textbf{\textsf{ {{cookiecutter.title_essay}} }}}
   $if(subtitle)$
   \vskip 1em
-  {\Large \textsf{{cookiecutter.subtitle_essay}}}
+  {\Large \textsf{ {{cookiecutter.subtitle_essay}} }}
   $endif$
   \vskip 2em
-  \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$}}
+  \noindent {\Large \textsf{著: $for(author)${ {{cookiecutter.author_essay}} }$sep$, $endfor$}}
   \vfill
 }
 $endif$
@@ -977,6 +977,11 @@ $endif$
 %%
 %% end titlepage
 %%
+% 关闭页码 %
+\pagenumbering{gobble}
+
+% 在实际文档的后面加上封面和序言 %
+\input{templates/prologue}
 
 $if(has-frontmatter)$
 \frontmatter
