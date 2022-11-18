@@ -1,11 +1,11 @@
 SOURCE=chapters
 BUILD=build
-BOOK={{cookiecutter.output_filename}}
+BOOK=output
 pdf:
 	pandoc \
 		--filter pandoc-crossref \
 		--pdf-engine=xelatex \
-		--template=./templates/eisvogel-2.0.0.tex \
+		--template=./templates/template.tex \
 		--highlight-style tango \
 		--toc \
 		--number-sections \
