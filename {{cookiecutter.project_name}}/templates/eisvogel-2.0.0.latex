@@ -81,8 +81,8 @@ $endfor$
 ]{$if(beamer)$$documentclass$$else$$if(book)$scrbook$else$scrartcl$endif$$endif$}
 $if(beamer)$
 $if(background-image)$
-\usebackgroundtemplate{%
-  \includegraphics[width=\paperwidth]{$background-image$}%
+\usebackgroundtemplate{
+  \includegraphics[width=\paperwidth]{$background-image$}
 }
 $endif$
 \usepackage{pgfpages}
