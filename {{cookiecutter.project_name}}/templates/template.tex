@@ -936,12 +936,12 @@ $if(titlepage-background)$
   \setstretch{2}
   \vskip 1em
   \noindent {\Huge \textbf{\textbf{\textsf{ {{cookiecutter.title_essay}} }}}}
-  $if(subtitle)$
+  $if({{cookiecutter.subtitle_essay}})$
   \vskip 1em
   {\Large \textsf{ {{cookiecutter.subtitle_essay}}} }
   $endif$
   \vskip 2em
-  \noindent {\Large \textsf{著: $for(author)$ { {{cookiecutter.author_essay}} }$sep$, $endfor$} \vskip 0.6em \textsf{$date$}}
+  \noindent {\Large \textsf{著: {{cookiecutter.author_essay}} }\vskip 0.6em \textsf{$date$}}
   \vfill
 }
 $else$
@@ -949,12 +949,12 @@ $else$
   \setstretch{1.4}
   \vfill
   \noindent {\Huge \textbf{\textsf{ {{cookiecutter.title_essay}} }}}
-  $if(subtitle)$
+  $if({{cookiecutter.subtitle_essay}})$
   \vskip 1em
   {\Large \textsf{ {{cookiecutter.subtitle_essay}} }}
   $endif$
   \vskip 2em
-  \noindent {\Large \textsf{著: $for(author)${ {{cookiecutter.author_essay}} }$sep$, $endfor$}}
+  \noindent {\Large \textsf{著: {{cookiecutter.author_essay}} }}
   \vfill
 }
 $endif$
