@@ -270,7 +270,7 @@ $if(lang)$
   pdflang={$lang$},
 $endif$
 $if(subject)$
-  pdfsubject={$subject$},
+  pdfsubject={{cookiecutter.subject}},
 $endif$
 $if(keywords)$
   pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
@@ -523,9 +523,9 @@ $else$
 }
 \makeatother
 $endif$
-\subtitle{$subtitle$}
+\subtitle{{cookiecutter.subtitle_essay}}
 $endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+\author{$for(author)${{cookiecutter.author_essay}}$sep$ \and $endfor$}
 \date{$date$}
 $if(beamer)$
 $if(institute)$
@@ -682,8 +682,8 @@ $endif$
 $if(beamer)$
 $else$
 \usepackage{titling}
-\title{$title$}
-\author{$for(author)$$author$$sep$, $endfor$}
+\title{{cookiecutter.title_essay}}
+\author{$for(author)${{cookiecutter.author_essay}}$sep$, $endfor$}
 \date{$date$}
 $endif$
 
@@ -935,10 +935,10 @@ $if(titlepage-background)$
 {
   \setstretch{2}
   \vskip 1em
-  \noindent {\Huge \textbf{\textbf{\textsf{$title$}}}}
+  \noindent {\Huge \textbf{\textbf{\textsf{{cookiecutter.title_essay}}}}}
   $if(subtitle)$
   \vskip 1em
-  {\Large \textsf{$subtitle$}}
+  {\Large \textsf{{cookiecutter.subtitle_essay}}}
   $endif$
   \vskip 2em
   \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$} \vskip 0.6em \textsf{$date$}}
@@ -948,10 +948,10 @@ $else$
 {
   \setstretch{1.4}
   \vfill
-  \noindent {\Huge \textbf{\textsf{$title$}}}
+  \noindent {\Huge \textbf{\textsf{{cookiecutter.title_essay}}}}
   $if(subtitle)$
   \vskip 1em
-  {\Large \textsf{$subtitle$}}
+  {\Large \textsf{{cookiecutter.subtitle_essay}}}
   $endif$
   \vskip 2em
   \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$}}
