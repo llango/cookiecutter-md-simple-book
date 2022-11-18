@@ -1,6 +1,6 @@
 SOURCE=chapters
 BUILD=build
-BOOK=output
+BOOK={{cookiecutter.title_essay}}
 pdf:
 	pandoc \
 		--filter pandoc-crossref \
