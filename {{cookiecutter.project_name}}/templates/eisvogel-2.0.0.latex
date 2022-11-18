@@ -223,15 +223,17 @@ $if(outertheme)$
 $endif$
 $endif$
 % Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
+\IfFileExists{upquote.sty}{
+    \usepackage{upquote}
+}{}
+\IfFileExists{microtype.sty}{
   \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
 $if(indent)$
 $else$
 \makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
+\@ifundefined{KOMAClassName}{
   \IfFileExists{parskip.sty}{%
     \usepackage{parskip}
   }{% else
