@@ -85,6 +85,15 @@ $if(background-image)$
   \includegraphics[width=\paperwidth]{$background-image$}
 }
 $endif$
+
+\usepackage{fontspec}
+\usepackage{metalogo}
+\usepackage{amsmath}
+\usepackage{newtxtt, newtxmath}
+
+\setmainfont{CCBackBeat} %英文字体
+\setCJKmainfont{DengXian} % 中文字体
+
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
@@ -683,7 +692,7 @@ $if(beamer)$
 $else$
 \usepackage{titling}
 \title{ {{cookiecutter.title_essay}} }
-\author{著: $for(author)${ {{cookiecutter.author_essay}} }$sep$, $endfor$}
+\author{著: {{cookiecutter.author_essay}} }
 \date{$date$}
 $endif$
 
@@ -934,24 +943,25 @@ $if(titlepage-background)$
 % The titlepage with a background image has other text spacing and text size
 {
   \setstretch{2}
-  \vskip 1em
-  \noindent {\Huge \textbf{\textbf{\textsf{ {{cookiecutter.title_essay}} }}}}
-  \vskip 1em
-  {\Large \textsf{ {{cookiecutter.subtitle_essay}}} }
+  \vfill
+  \vskip -8em
+  \noindent {\yihao \textsc{\textbf{ {{cookiecutter.title_essay}} }} }
+  \vskip 6em
+  {\Huge \textsf{ {{cookiecutter.subtitle_essay}}} }
   \vskip 2em
-  \noindent {\Large \textsf{著: {{cookiecutter.author_essay}} }\vskip 0.6em \textsf{$date$}}
+  \noindent {\Large \textsf{\textbf{著}:: {{cookiecutter.author_essay}} }\vskip 0.6em \textsf{$date$}}
   \vfill
 }
 $else$
 {
-  \setstretch{1.4}
-  \vfill
-  \noindent {\Huge \textbf{\textsf{ {{cookiecutter.title_essay}} }}}
-  \vskip 1em
-  {\Large \textsf{ {{cookiecutter.subtitle_essay}} }}
-  \vskip 2em
-  \noindent {\Large \textsf{著: {{cookiecutter.author_essay}} }}
-  \vfill
+    \setstretch{2}
+    \vskip -8em
+    \noindent {\yihao \textsc{\textbf{ {{cookiecutter.title_essay}} }} }
+    \vskip 6em
+    {\Huge \textsf{ {{cookiecutter.subtitle_essay}}} }
+    \vskip 2em
+    \noindent {\Large \textsf{\textbf{著}:: {{cookiecutter.author_essay}} }\vskip 0.6em \textsf{$date$}}
+    \vfill
 }
 $endif$
 
