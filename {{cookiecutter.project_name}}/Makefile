@@ -5,7 +5,7 @@ pdf:
 	pandoc \
 		--filter pandoc-crossref \
 		--pdf-engine=xelatex \
-		--template=./templates/eisvogel-2.0.0.latex \
+		--template=./templates/eisvogel-2.0.0.tex \
 		--highlight-style tango \
 		--toc \
 		--number-sections \
