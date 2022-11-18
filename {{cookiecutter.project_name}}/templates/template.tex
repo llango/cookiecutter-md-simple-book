@@ -492,14 +492,18 @@ $if(csl-refs)$
   \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
   % set entry spacing
   \ifnum #2 > 0
+  {% raw %}
   \setlength{\parskip}{#2\baselineskip}
+  {% endraw %}
   \fi
  }
  {}
 \usepackage{calc}
+{% endraw %}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+{% endraw %}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 $endif$
 $if(csquotes)$
