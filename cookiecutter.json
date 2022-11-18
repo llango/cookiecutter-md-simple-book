@@ -1,0 +1,9 @@
+{
+    "project_name": "simpleBook",
+    "title_essay": "图书标题",
+    "subtitle_essay": "图书子标题",
+    "author_essay": "图书作者",
+    "paper_size": ["a4paper", "a5paper"],
+    "output_filename": "simpleBook",
+    "subject": "主题"
+}
