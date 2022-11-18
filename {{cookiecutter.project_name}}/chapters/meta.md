@@ -1,9 +1,4 @@
 ---
-title: {{cookiecutter.title_essay}}
-subtitle: {{cookiecutter.subtitle_essay}}
-author: 著: {{cookiecutter.author_essay}}
-subject: {{cookiecutter.subject}}
-keywords: 
 lang: 
 lof: false
 lof-own-page: true
