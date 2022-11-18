@@ -917,7 +917,9 @@ $endif$
 $if(titlepage-background)$
 \tikz[remember picture,overlay] \node[inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{$titlepage-background$}};
 $endif$
+{% raw %}
 \newcommand{\colorRule}[3][black]{\textcolor[HTML]{#1}{\rule{#2}{#3}}}
+{% endraw %}
 \begin{flushleft}
 \noindent
 \\[-1em]
